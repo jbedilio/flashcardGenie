@@ -1,0 +1,26 @@
+{
+  "name": "flashcardgenie",
+  "version": "1.0.0",
+  "description": "flashcard-maker",
+  "main": "genie.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbedilio/flashcardGenie.git"
+  },
+  "keywords": [
+    "flashcard",
+    "genie",
+    "flashcard",
+    "genie",
+    "card"
+  ],
+  "author": "joshuabedilion",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jbedilio/flashcardGenie/issues"
+  },
+  "homepage": "https://github.com/jbedilio/flashcardGenie#readme"
+}

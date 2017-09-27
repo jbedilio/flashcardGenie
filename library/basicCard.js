@@ -2,7 +2,7 @@
 function BasicGenie(name, front, back) {
 
     //making the constructor scope safe
-    if (this instanceof Genie){
+    if (this instanceof BasicGenie){
 
         //the name of the card (i.e. first president)
         this.name = name;
@@ -20,4 +20,4 @@ function BasicGenie(name, front, back) {
     }
 }
 
-module.exports = BasicGenie();
+module.exports = BasicGenie;

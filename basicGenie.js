@@ -1,18 +1,20 @@
+var BasicGenie = require('./library/basicCard.js');
+
+var cardInfo = require('./basic.json');
+
 var inquirer = require('inquirer');
 
-var basicGenie = require('./basicCard.js');
+var wrongArr =[];
 
-flashCards = [];
+var rightArr = [];
+
+
 
 inquirer.prompt([
-    {   type: input
-        message: '?'}
-    {   name: 'front',
-        message: 'Enter your question fool!'
-    },
-    {   name: 'back',
-        message: 'Enter your answer fool!'}
+    {   type: input,
+        message: 'what color is the sky?',
+        name: 
+
                  /* Pass your questions in here */]).then(function (card) {
-        var card = BasicGenie(name, front, back);
-        c
+        var card = BasicGenie(card.front, card.back);
 });

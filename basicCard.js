@@ -1,5 +1,5 @@
 //setting the constructor 
-function BasicGenie(name, front, back, type) {
+function BasicGenie(name, front, back) {
 
     //making the constructor scope safe
     if (this instanceof Genie){
@@ -13,11 +13,11 @@ function BasicGenie(name, front, back, type) {
         //the back of the card to hold the answer (i.e. George Washington)
         this.back = back;
 
-        this.
-
     }else{
 
         //building the constructor to work without the 'new' keyword
         return new BasicGenie(name, front, back);
     }
 }
+
+module.exports = BasicGenie();

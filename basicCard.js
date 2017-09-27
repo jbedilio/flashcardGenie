@@ -13,15 +13,7 @@ function BasicGenie(name, front, back, type) {
         //the back of the card to hold the answer (i.e. George Washington)
         this.back = back;
 
-        this.type = () => {
-            
-            switch(type){
-                
-                case 'prompt':
-
-
-            }
-
+        this.
 
     }else{
 

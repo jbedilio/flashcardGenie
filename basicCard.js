@@ -1,5 +1,5 @@
 //setting the constructor 
-function BasicGenie(name, front, back) {
+function BasicGenie(name, front, back, type) {
 
     //making the constructor scope safe
     if (this instanceof Genie){
@@ -12,6 +12,16 @@ function BasicGenie(name, front, back) {
         
         //the back of the card to hold the answer (i.e. George Washington)
         this.back = back;
+
+        this.type = () => {
+            
+            switch(type){
+                
+                case 'prompt':
+
+
+            }
+
 
     }else{
 

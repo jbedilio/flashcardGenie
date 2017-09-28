@@ -1,6 +1,10 @@
 [
     {
-        "front": "What color is the sky?",
-        "Back": "Blue"
+        "front":"What color is the sky?",
+        "back":"blue"
+    },
+    {
+        "front":"What month is it?",
+        "back":"september"
     }
 ]

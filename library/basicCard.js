@@ -1,8 +1,8 @@
 //setting the constructor 
-function BasicGenie(front, back, name) {
+function BasicGenie(front, back) {
 
     //making the constructor scope safe
-    if (this instanceof BasicGenie){
+    //if (this instanceof BasicGenie){
 
         //the front of the card to hold the question (i.e. "Who was the first president of the US?")
         this.front = front;
@@ -10,11 +10,18 @@ function BasicGenie(front, back, name) {
         //the back of the card to hold the answer (i.e. George Washington)
         this.back = back;
 
-    }else{
+    //}else{
 
         //building the constructor to work without the 'new' keyword
-        return new BasicGenie(front, back);
-    }
+        //return new BasicGenie(back);
+    //}
 }
 
 module.exports = BasicGenie;
+
+//var newCard = BasicGenie("What's up?", "Nothing");
+
+
+
+
+//console.log(newCard);

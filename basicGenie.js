@@ -6,54 +6,52 @@ var cardInfo = require('./basic.json');
 var inquirer = require('inquirer');
 
 
+var correct = 0;
 
-var question = 0;
+var incorrect = 0;
 
-//var wrongArray =[];
+var count = 0;
 
 var cardArray = [];
 
 function playGame() {
 
-    if (question < 2) {
+    if (count < cardInfo.length) {
 
     console.log('Next question');
 
     inquirer.prompt([
 
         {   type: "input",
-            message: cardInfo[0].front,
-            name: cardInfo[0].back
-        },
-        {   type: "input",
-            message: cardInfo[1].front,
-            name: cardInfo[1].back
-        }]).then(function (answers) {
+            message: cardInfo[count].front,
+            name: 'answer'
+        }
+        ]).then(function (data) {
 
-            for(let i = 0; i < cardInfo.length; i++){
+            if(data.answer == cardInfo[count].back){
 
-            var card = new BasicGenie(answers.name);
+                correct++;
 
+            } else {
+
+                incorrect++;
+
+                console.log('\n' + 'You guessed: ' + data.answer + '\n' +
+
+                    'Correct answer is: ' + cardInfo[count].back + '\n'
+
+                    + '-----------------------------------\n');
             }
-
             //card.split(',');
 
             //cardArray.push(card);
 
             //console.log(JSON.parse(card, null, 2));
-;
 
-            for (let i = 0; i < cardInfo.length; i++) {
+            
 
-            console.log('\n' + 'You guessed: ' + answers.name + '\n' + 
-
-                        'Correct answer is: ' + cardInfo[i].back + '\n'
-
-                        + '-----------------------------------\n');
-            }
-
-            console.log('answer2' + answers);
-            question++;
+            console.log('answer2', data);
+            count++;
             /*for(let i = 0; i < question.length; i++){
 
                 if(answers[i] == cardInfo[i].back){
@@ -70,7 +68,14 @@ function playGame() {
             }*/
         playGame();
         })
+    } else {
+
+        console.log('\n' + 'You got ' + incorrect + ' incorrect.' + '\n' +
+
+            'Your got ' + correct + ' correct.' + '\n'
+
+            + '-----------------------------------\n');
+        }
     };
-}
 
 playGame();

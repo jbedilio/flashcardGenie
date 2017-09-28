@@ -9,9 +9,9 @@ var inquirer = require('inquirer');
 
 var question = 0;
 
-var wrongArr =[];
+//var wrongArray =[];
 
-var rightArr = [];
+var cardArray = [];
 
 function playGame() {
 
@@ -30,15 +30,22 @@ function playGame() {
             name: cardInfo[1].back
         }]).then(function (answers) {
 
-            var card = new BasicGenie(answers);
+            for(let i = 0; i < cardInfo.length; i++){
 
-            console.log('card' + card);
+            var card = new BasicGenie(answers.name);
 
-            console.log('answer' + answers);
+            }
 
-            for (let i = 0; i < question.length; i++) {
+            //card.split(',');
 
-            console.log('\n' + 'You guessed: ' + answers[i] + '\n' + 
+            //cardArray.push(card);
+
+            //console.log(JSON.parse(card, null, 2));
+;
+
+            for (let i = 0; i < cardInfo.length; i++) {
+
+            console.log('\n' + 'You guessed: ' + answers.name + '\n' + 
 
                         'Correct answer is: ' + cardInfo[i].back + '\n'
 
@@ -46,25 +53,24 @@ function playGame() {
             }
 
             console.log('answer2' + answers);
-
-            //for(let i = 0; i < question.length; i++){
+            question++;
+            /*for(let i = 0; i < question.length; i++){
 
                 if(answers[i] == cardInfo[i].back){
 
-                    correct = rightArr.push(answers);
+                    correct = rightArr.push(card);
 
                 } else {
 
-                    incorrect = wrongArr.push(answers);
+                    incorrect = wrongArr.push(card);
                 }
                 question++;
                 console.log('Correct: ' + correct + '\n' + 
                             'Incorrect: ' + incorrect);
-            //}
-         //}
-        playGame(card);
-    });
-};
-};
+            }*/
+        playGame();
+        })
+    };
+}
 
 playGame();

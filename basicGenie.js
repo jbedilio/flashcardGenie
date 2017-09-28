@@ -18,7 +18,7 @@ function playGame() {
 
     if (count < cardInfo.length) {
 
-    console.log('Next question');
+    console.log('Question ', (count + 1));
 
     inquirer.prompt([
 
@@ -42,13 +42,6 @@ function playGame() {
 
                     + '-----------------------------------\n');
             }
-            //card.split(',');
-
-            //cardArray.push(card);
-
-            //console.log(JSON.parse(card, null, 2));
-
-            
 
             console.log('answer2', data);
             count++;
